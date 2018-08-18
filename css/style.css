@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFE600;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 420px;
+  height: 235px;
+  position: relative;
+}
+
+.nose {
+  width: 0;
+  height: 0;
+  border-radius: 9px;
+  border: 11px solid transparent;
+  border-top: 11px solid #000;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.eye {
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  background: #2E2E2E;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+
+.eye.left {
+  left: 60px;
+}
+
+.eye.right {
+  right: 60px;
+}
+
+.eye.left::before,
+.eye.right::before {
+  content: '';
+  display: block;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  background: #FFFFFF;
+  height: 25px;
+  width: 25px;
+  margin-left: 3px;
+}
+
+.face {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  background: #FF0200;
+  border: 3px solid #000;
+  border-radius: 50%;
+  top: 110px
+}
+
+.face.right {
+  right: 0;
+}
+
+.upperLip {
+  position: absolute;
+  width: 91.06px;
+  height: 28.45px;
+  top: 60px;
+  border: 3px solid #000;
+  background: #FFE600;
+}
+
+.upperLip.left {
+  right: 210px;
+  border-bottom-left-radius: 90%;
+  transform: rotate(-21deg);
+  border-top-width: 0px;
+  border-right-width: 0px;
+}
+
+.upperLip.right {
+  left: 210px;
+  border-bottom-right-radius: 90%;
+  transform: rotate(21deg);
+  border-top-width: 0px;
+  border-left-width: 0px;
+}
+
+.lowerLipWrapper {
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  width: 180px;
+  height: 164px;
+  overflow: hidden;
+}
+
+.lowerLipWrapper>.lowerLip {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%/50%;
+  bottom: 0;
+  width: 180px;
+  height: 808px;
+  background: #9B010B;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.lowerLipWrapper>.lowerLip>.tongue {
+  position: absolute;
+  right: 22px;
+  bottom: 0;
+  height: 126px;
+  width: 130px;
+  background: #FF485E;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
