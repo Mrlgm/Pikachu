@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.5s;
   box-sizing: border-box;
 }
 
@@ -11,8 +12,9 @@ body {
 }
 
 #code{
-  overflow: hidden;
+  overflow: scroll;
   height: 100%;
+  font-size: 25px;
 }
 
 .codeWrapper {
@@ -26,6 +28,20 @@ body {
   height: 50%;
 }
 
+.lowerLipWrapper {
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  width: 180px;
+  height: 164px;
+  overflow: hidden;
+}
+
+.lowerLipWrapper>.lowerLip>.tongue {
+  position: absolute;
+  right: 22px;
+  bottom: 0;
+}
 /* .preview {
   background: #FFE600;
   height: 100%;
@@ -119,14 +135,7 @@ body {
   border-left: none;
 }
 */
-.lowerLipWrapper {
-  position: absolute;
-  right: 120px;
-  bottom: 0;
-  width: 180px;
-  height: 164px;
-  overflow: hidden;
-}
+
 /*
 .lowerLipWrapper>.lowerLip {
   position: absolute;
